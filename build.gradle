@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group 'at.klausbetz'
-version '1.4.2'
+version '1.4.3'
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 ext {
