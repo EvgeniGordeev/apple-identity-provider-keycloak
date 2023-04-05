@@ -13,7 +13,6 @@ ext {
 
 repositories {
     mavenCentral()
-    maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -24,10 +23,27 @@ dependencies {
 
     testImplementation "org.keycloak:keycloak-services:$keycloakVersion"
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
-
-    implementation "$group:apple-identity-provider:$version"
 }
 
 test {
     useJUnitPlatform()
+}
+
+// based on https://github.com/jitpack/gradle-simple
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+// ./gradlew publishToMavenLocal
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+// run 'gradle wrapper' to regenerate gradle/ folder
+wrapper {
+    gradleVersion = "8.0.2"
+    distributionType = Wrapper.DistributionType.BIN
 }
