@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'maven'
+    id 'maven-publish'
 }
 
 group 'at.klausbetz'
-version '1.4.3'
+version '1.4.5'
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 ext {
@@ -13,6 +13,7 @@ ext {
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
