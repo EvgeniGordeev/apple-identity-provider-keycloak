@@ -27,9 +27,8 @@ paper [Keycloak 19.0.0 release](https://www.keycloak.org/2022/07/keycloak-1900-r
 ## Installation
 
 1. Make sure you have a copy of the latest [JAR](https://github.com/klausbetz/apple-identity-provider-keycloak/releases/latest) of this
-   provider package or include it as a Maven dependency 
-   [![Release](https://jitpack.io/v/klausbetz/apple-identity-provider-keycloak.svg)]
-   (https://jitpack.io/#klausbetz/apple-identity-provider-keycloak)
+   provider package or include it as a Maven dependency <a href="https://jitpack.io/#klausbetz/apple-identity-provider-keycloak">
+   <img src="https://jitpack.io/v/klausbetz/apple-identity-provider-keycloak.svg" alt="Release"></a>.
 .
 2. Deploy the JAR file to keycloak (by placing it in `/opt/keycloak/providers` if you use docker; alternatively see
    this [guide](https://www.keycloak.org/docs/latest/server_development/index.html#registering-provider-implementations))
