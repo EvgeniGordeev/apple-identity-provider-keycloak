@@ -1,0 +1,16 @@
+# Triggers a release build on JitPack
+
+name: jitpack-build
+
+on:
+  push:
+    tags: [ '*' ]
+
+jobs:
+  jitpack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request $GITHUB_REF_NAME from JitPack
+        run: |
+          # timeout in 30 seconds to avoid waiting for build
+          curl -s -m 30 https://jitpack.io/$GITHUB_REPOSITORY/$GITHUB_REF_NAME/maven-metadata.xml || true
